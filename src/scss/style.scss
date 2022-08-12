@@ -16,6 +16,11 @@ body {
 	font-size: $font-size;
 }
 
+//======================lock==================================================
+body.lock {
+	overflow: hidden;
+}
+
 .wrapper {
 	// max-width: 1440px;
 	width: 100%;
@@ -23,7 +28,8 @@ body {
 	// margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	padding: 0px 15px;
+	// padding: 0px 15px;
+	// position: relative;
 }
 
 // .-container {
@@ -67,16 +73,20 @@ body {
 	padding: 0px rem(100);
 	align-items: center;
 	position: fixed;
-	overflow: hidden;
+	justify-content: space-between;
+	// overflow: hidden;
+	// left: 0;
+	// top: 0;
 	z-index: 50;
 	background-color: #fff;
 
 	@media (min-width:em(1024)) {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		z-index: 50;
+		// position: fixed;
+		// overflow: hidden;
+		// left: 0;
+		// top: 0;
+		// width: 100%;
+		// z-index: 50;
 	}
 
 	@media (max-width:em(1025)) {
@@ -106,12 +116,13 @@ body {
 
 	&__burger {
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		background-color: #D2E1FF;
 		position: absolute;
 		top: 0;
 		left: -100vw;
 		transition: left 2s ease;
+		z-index: 999;
 
 		@media (max-width:em(426)) {}
 	}
@@ -168,6 +179,7 @@ body {
 	}
 }
 
+
 .header {
 
 	&__colum {
@@ -194,7 +206,8 @@ body {
 .left-header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	border: 1px solid #000;
+	// justify-content: space-between;
 
 	&__logo {
 		flex: 0 0 rem(26);
@@ -213,7 +226,7 @@ body {
 			&::before {
 				content: '';
 				position: absolute;
-				top: rem(11);
+				top: rem(9);
 				width: rem(26);
 				height: rem(5);
 				background: #5E81FE;
@@ -552,28 +565,32 @@ body {
 .inscrease {
 	width: 100%;
 	flex: 1 1 auto;
-	border: 1px solid #000;
-	// background-color: #D8E0F7;
+	// border: 1px solid #000;
 	background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
-	margin-top: rem(80);
+	padding-top: rem(160);
+	animation: inscrease 3s;
+	opacity: 1;
 
-	@media (max-width:426px) {
-		margin-top: rem(40);
+	@media (max-width:768px) {
+		padding-top: rem(120);
 	}
 
+	@media (max-width:426px) {
+		padding-top: rem(80);
+	}
+
+	@media (max-width:320px) {
+		padding-top: rem(120);
+	}
 
 	&__text {
 		width: 80%;
 		margin: 0 auto;
 		border: 1px solid #000;
-		margin-top: rem(90);
+		// margin-top: rem(90);
 
 		@media (min-width:1440px) {
 			width: 45%;
-		}
-
-		@media (max-width:768px) {
-			margin-top: rem(40);
 		}
 	}
 
@@ -622,6 +639,10 @@ body {
 		margin-bottom: rem(20);
 		@include adaptive-value("font-size", 48, 40, 2);
 
+		@media (max-width:320px) {
+			font-size: rem(36);
+			line-height: rem(40);
+		}
 
 		& span {
 			font-weight: $font-weight;
@@ -641,6 +662,11 @@ body {
 		margin: 0 auto;
 		@include adaptive-value("font-size", 15, 8, 2);
 
+		@media (max-width:320px) {
+			font-size: rem(12);
+			line-height: rem(20);
+		}
+
 	}
 }
 
@@ -654,6 +680,8 @@ body {
 		left: 0;
 		z-index: 10;
 		border: 1px solid #000;
+		// background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+
 	}
 }
 
@@ -680,6 +708,39 @@ body {
 .line.active {
 	display: block;
 	color: antiquewhite;
+}
+
+.inscrease.active {
+	animation: inscrease-active 3s;
+	opacity: 0;
+}
+
+@keyframes inscrease {
+	0% {
+		opacity: 0;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes inscrease-active {
+	0% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
 
 //-------------------servises----------------------------
