@@ -5,15 +5,7 @@ let rightHeader = document.querySelector('.right-header');
 let headerColum = document.querySelector('.header__colum');
 let navClass = document.querySelector('.nav');
 let spanAnimate = headerColum.querySelectorAll('*');
-// let spanAnimate = headerColum.children;
-// let spanAnimate = document.getElementsByTagName('span');
-console.log(spanAnimate);
 
-// spanAnimate.forEach(element => {
-// 	console.log(element);
-// });
-
-// let nav = document.querySelector('.left-header__nav');
 let nav = document.querySelector('#nav');
 
 logoClick.addEventListener('click', function () {
@@ -23,7 +15,6 @@ logoClick.addEventListener('click', function () {
 	rightHeader.classList.toggle('active');
 	logoClick.classList.toggle('active');
 	navClass.classList.toggle('active');
-	// spanAnimate.classList.toggle('active');
 	spanAnimate.forEach(element => {
 		element.classList.toggle('active');
 	});

@@ -17,8 +17,12 @@ backToTop();
 import * as AcordeonWindowSize from "./modules/JQAcordeon.js";
 AcordeonWindowSize();
 
-//
+// "Бургер, анімація випадаючого меню та стрілки"
 import * as active from "./modules/burger.js";
+active();
+
+// Анімація "графіку"
+import * as animateLine from "./modules/animateLine.js";
 active();
 
 

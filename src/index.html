@@ -8,7 +8,129 @@
 	<div class="wrapper">
 		@@include('html/header.html', {})
 		<main class="page">
+			<div class="inscrease">
+				<div class="inscrease__text text-inscrease">
+					<div class="text-inscreas__top">Plan your life</div>
+					<h2 class="text-inscreas__center">Increase your <span>productivity</span></h2>
+					<div class="text-inscreas__bottom">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu
+						atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</div>
+				</div>
+				<div class="inscrease__bg bg">
+					<div class="bg">
+						<!-- <img src="@img/line.svg" alt="line"> -->
+						<svg>
+							<!-- first sircle + two vertical lines -->
+							<path d="M0 422 C 70 420, 10 420, 117 420" stroke="#5982E7" fill="transparent" stroke-width="6" />
+							<circle r="10" stroke-width="0" class="circle circle--1" id="circle_11">
+								<animateMotion dur="3s" fill="freeze" id="circle_1">
+									<mpath xlink:href="#track_circle_1" />
+								</animateMotion>
+								<path d="M0 422 C 70 420, 10 420, 108 420" fill="none" stroke="none" id="track_circle_1" />
+							</circle>
 
+							<line x1="109" y1="409" x2="109" y2="270" stroke="#5982E7" style="stroke-linecap:round;"
+								stroke-width="2" id="line_1_top" class="line">
+								<animate attributeName="y2" dur="3s" values=409;270 repeatCount="freeze" begin="circle_1.end" />
+							</line>
+
+							<line x1="109" y1="431" x2="109" y2="500" stroke="#5982E7" style="stroke-linecap:round;"
+								stroke-width="2" id="line_1_down" class="line">
+								<animate attributeName="y2" dur="3s" values=431;500 repeatCount="freeze" begin="circle_1.end" />
+							</line>
+							<!-- second sircle + two vertical lines -->
+							<path d="M117,420 Q320,400 350,395 T522,390" fill="transparent" stroke="#5982E7"
+								stroke-width="6" />
+							<circle r="10" stroke-width="0" class="circle" id="circle_12">
+								<animateMotion dur="3s" fill="freeze" begin="circle_1.end" id="circle_2">
+									<mpath xlink:href="#track_circle_2" />
+								</animateMotion>
+							</circle>
+							<path d="M108,420 Q320,400 350,395 T512,390" fill="none" stroke="none" id="track_circle_2" />
+
+							<line x1="512" y1="379" x2="512" y2="360" stroke="#5982E7" style="stroke-linecap:round;"
+								stroke-width="2" id="line_2_top" class="line">
+								<animate attributeName="y2" dur="3s" values=379;360 repeatCount="freeze" begin="circle_2.end" />
+							</line>
+
+							<line x1="512" y1="401" x2="512" y2="440" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_2_down" class="line">
+								<animate attributeName="y2" dur="3s" values=401;440 repeatCount="freeze" begin="circle_2.end" />
+							</line>
+							<!-- third sircle + two vertical lines -->
+							<path d="M522,390 Q650,390 730,315 T932,248" fill="transparent" stroke="#5982E7"
+								stroke-width="6" />
+							<circle r="10" stroke-width="0" class="circle" id="circle_13">
+								<animateMotion dur="3s" fill="freeze" begin="circle_2.end" id="circle_3">
+									<mpath xlink:href="#track_circle_3" />
+								</animateMotion>
+							</circle>
+							<path d="M520,390 Q650,390 730,315 T922,248" fill="none" stroke="none" id="track_circle_3" />
+
+							<line x1="922" y1="237" x2="922" y2="200" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_3_top" class="line">
+								<animate attributeName="y2" dur="3s" values=237;200 repeatCount="freeze" begin="circle_3.end" />
+							</line>
+
+							<line x1="922" y1="260" x2="922" y2="440" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_3_down" class="line">
+								<animate attributeName="y2" dur="3s" values=260;440 repeatCount="freeze" begin="circle_3.end" />
+							</line>
+							<!-- fourth sircle + two vertical lines -->
+							<path d="M932,248 Q1150,250 1230,190 T1350,130" fill="transparent" stroke="#5982E7"
+								stroke-width="6" />
+							<circle r="10" stroke-width="0" class="circle" id="circle_14">
+								<animateMotion dur="3s" fill="freeze" begin="circle_3.end" id="circle_4">
+									<mpath xlink:href="#track_circle_4" />
+								</animateMotion>
+							</circle>
+							<path d="M922,248 Q1150,250 1230,190 T1330,130" fill="transparent" stroke="none"
+								id="track_circle_4" />
+
+							<line x1="1330" y1="120" x2="1330" y2="80" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_4_top" class="line">
+								<animate attributeName="y2" dur="3s" values=120;80 repeatCount="freeze" begin="circle_4.end" />
+							</line>
+
+							<line x1="1330" y1="140" x2="1330" y2="400" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_4_down" class="line">
+								<animate attributeName="y2" dur="3s" values=140;400 repeatCount="freeze" begin="circle_4.end" />
+							</line>
+							<!-- fifth sircle + two vertical lines  -->
+							<path d="M1350,130 Q1500,110 1860,80 T2340,70" fill="transparent" stroke="#5982E7"
+								stroke-width="6" />
+							<circle r="10" stroke-width="0" class="circle" id="circle_15">
+								<animateMotion dur="6s" fill="freeze" begin="circle_4.end" id="circle_5">
+									<mpath xlink:href="#track_circle_5" />
+								</animateMotion>
+							</circle>
+							<path d="M1340,130 Q1500,110 1860,80 T2330,70" fill="transparent" stroke="none"
+								id="track_circle_5" />
+
+							<line x1="2330" y1="60" x2="2330" y2="30" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_5_top" class="line">
+								<animate attributeName="y2" dur="3s" values=60;30 repeatCount="freeze" begin="circle_5.end" />
+							</line>
+
+							<line x1="2330" y1="80" x2="2330" y2="200" stroke="#5982E7" style="stroke-linecap:round"
+								stroke-width="2" id="line_5_down" class="line">
+								<animate attributeName="y2" dur="3s" values=80;200 repeatCount="freeze" begin="circle_5.end" />
+							</line>
+							<!-- last line +  -->
+							<path d="M2340,70 Q3500,50 3860,40 T5330,50" fill="transparent" stroke="#5982E7"
+								stroke-width="6" />
+							<circle r="10" stroke-width="0" class="circle" id="circle_16">
+								<animateMotion dur="20s" fill="freeze" begin="circle_5.end" id="circle_6">
+									<mpath xlink:href="#track_circle_6" />
+								</animateMotion>
+							</circle>
+							<path d="M2340,70 Q3500,50 3860,40 T5330,50" fill="transparent" stroke="none"
+								id="track_circle_6" />
+
+						</svg>
+					</div>
+				</div>
+
+			</div>
 		</main>
 		@@include('html/footer.html', {})
 		<a class="_icon-up" title="Up"></a>
