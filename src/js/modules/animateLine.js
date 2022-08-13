@@ -19,34 +19,45 @@ let fourthLineTop = document.getElementById('line_4_top');
 let fourthLineDown = document.getElementById('line_4_down');
 let fifthLineTop = document.getElementById('line_5_top');
 let fifthLineDown = document.getElementById('line_5_down');
+let lable_1 = document.querySelector('.lable-1');
+let lable_2 = document.querySelector('.lable-2');
+let lable_3 = document.querySelector('.lable-3');
+let lable_4 = document.querySelector('.lable-4');
+let lable_5 = document.querySelector('.lable-5');
+
 
 
 circle1.addEventListener('endEvent', function () {
 	c12.classList.add('active');
 	firstLineTop.classList.add('active');
 	firstLineDown.classList.add('active');
+	lable_1.classList.add('active');
 });
 
 circle2.addEventListener('endEvent', function () {
 	c13.classList.add('active');
 	secondLineTop.classList.add('active');
 	secondineDown.classList.add('active');
+	lable_2.classList.add('active');
 });
 
 circle3.addEventListener('endEvent', function () {
 	c14.classList.add('active');
 	thirdLineTop.classList.add('active');
 	thirdLineDown.classList.add('active');
+	lable_3.classList.add('active');
 });
 
 circle4.addEventListener('endEvent', function () {
 	c15.classList.add('active');
 	fourthLineTop.classList.add('active');
 	fourthLineDown.classList.add('active');
+	lable_4.classList.add('active');
 });
 
 circle5.addEventListener('endEvent', function () {
 	c16.classList.add('active');
 	fifthLineTop.classList.add('active');
 	fifthLineDown.classList.add('active');
+	lable_5.classList.add('active');
 });

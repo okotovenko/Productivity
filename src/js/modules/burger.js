@@ -4,6 +4,9 @@ let colum = document.querySelector('.header__colum');
 let rightHeader = document.querySelector('.right-header');
 let headerColum = document.querySelector('.header__colum');
 let inscrease = document.querySelector('.inscrease');
+let clients = document.querySelector('.clients');
+let plan = document.querySelector('.plan');
+let read = document.querySelector('.read');
 let navClass = document.querySelector('.nav');
 let spanAnimate = headerColum.querySelectorAll('*');
 let lock = document.querySelector('body');
@@ -18,6 +21,9 @@ logoClick.addEventListener('click', function () {
 	logoClick.classList.toggle('active');
 	navClass.classList.toggle('active');
 	inscrease.classList.toggle('active');
+	plan.classList.toggle('active');
+	clients.classList.toggle('active');
+	read.classList.toggle('active');
 	spanAnimate.forEach(element => {
 		element.classList.toggle('active');
 	});
@@ -32,6 +38,9 @@ headerColum.addEventListener('click', function () {
 	navClass.classList.remove('active');
 	logoClick.classList.remove('active');
 	inscrease.classList.remove('active');
+	plan.classList.remove('active');
+	clients.classList.remove('active');
+	read.classList.remove('active');
 	spanAnimate.forEach(element => {
 		element.classList.remove('active');
 	});
