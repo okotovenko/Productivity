@@ -23,7 +23,15 @@ active();
 
 // Анімація "графіку"
 import * as animateLine from "./modules/animateLine.js";
-active();
+animateLine();
+
+// Код слайдеру "SLICK"
+import * as slick from "./modules/slick.js";
+slick();
+
+// Налаштування слайдеру "SLICK"
+import * as slickSettings from "./modules/slickSettings.js";
+slickSettings();
 
 
 

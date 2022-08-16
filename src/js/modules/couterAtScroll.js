@@ -15,7 +15,7 @@ export function windowLoad() {
 	// Функція анімації
 	function digitsCountersAnimate(digitsCounter) {
 		let startTimestamp = null;
-		const duration = parseInt(digitsCounter.dataset.digitsCounter) ? parseInt(digitsCounter.dataset.digitsCounter) : 3000;
+		const duration = parseInt(digitsCounter.dataset.digitsCounter) ? parseInt(digitsCounter.dataset.digitsCounter) : 4000;
 		const startValue = parseInt(digitsCounter.innerHTML);
 		const startPosition = 0;
 		const step = (timestamp) => {
@@ -34,7 +34,7 @@ export function windowLoad() {
 	// Пуск анімації при скролі (при появі блока з лічильниками)
 	let options = {
 
-		threshold: 1 // При якій висоті об'єкту буде починатися анімація (0,3 - це 30%)
+		threshold: 0.7 // При якій висоті об'єкту буде починатися анімація (0,3 - це 30%)
 	}
 	let observer = new IntersectionObserver((entries, observer) => {
 		entries.forEach(entry => {
@@ -45,12 +45,12 @@ export function windowLoad() {
 					digitsCountersInit(digitsCountersItems);
 				}
 				// Вимкнення відслідковування і анімації після спрацювання
-				// observer.unobserve(targetElement);
+				observer.unobserve(targetElement);
 			}
 		});
 	}, options);
 
-	let sections = document.querySelectorAll('.designing__items');
+	let sections = document.querySelectorAll('.numbers__colum');
 	if (sections.length) {
 		sections.forEach(section => {
 			observer.observe(section);

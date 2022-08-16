@@ -10,7 +10,7 @@
 //! На всіх розширеннях
 $(document).ready(function () {
 	$('.acordeon__title').click(function (event) {
-		if ($('.footer').hasClass('only')) {
+		if ($('.questions__question').hasClass('only')) {
 			$('.acordeon__title').not($(this)).removeClass('active');
 			$('.acordeon__body').not($(this).next()).slideUp(300);
 		}
