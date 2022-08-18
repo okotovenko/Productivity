@@ -12,7 +12,6 @@ body {
 	height: 100%;
 	font-family: $font-family;
 	background-color: #FAFAFA;
-	// border: 1px solid #000;
 	font-size: $font-size;
 }
 
@@ -22,35 +21,16 @@ body.lock {
 }
 
 .wrapper {
-	// max-width: 1440px;
 	width: 100%;
 	min-height: 100%;
-	// margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	// padding: 0px 15px;
-	// position: relative;
 }
 
 .-container {
-	// padding: 0px 15px;
 	max-width: rem(1440);
 	margin: 0 auto;
 }
-
-
-// .-ibg {
-// 	position: relative;
-// }
-
-// .-ibg img {
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100%;
-// 	top: 0;
-// 	left: 0;
-// 	object-fit: cover;
-// }
 
 //------------------page-----------------------------
 .page {
@@ -59,6 +39,7 @@ body.lock {
 	flex: 1 1 auto;
 	margin: 0 auto;
 	overflow: hidden;
+	animation: header-right 3s;
 }
 
 .page.active {
@@ -141,8 +122,6 @@ body.lock {
 		top: 0;
 		margin: 20px;
 		transition: 2s ease;
-		//visibility: hidden;
-		//opacity: 0;
 
 		& span {
 			content: '';
@@ -212,7 +191,6 @@ body.lock {
 .left-header {
 	display: flex;
 	align-items: center;
-	// justify-content: space-between;
 
 	&__logo {
 		flex: 0 0 rem(26);
@@ -322,7 +300,6 @@ body.lock {
 
 .right-header {
 	display: flex;
-	//flex-wrap: wrap;
 	align-items: center;
 	justify-content: flex-end;
 	gap: rem(44);
@@ -342,7 +319,6 @@ body.lock {
 
 	&__icons {
 		display: flex;
-		//flex-wrap: wrap;
 		gap: rem(35);
 
 		@media (max-width:em(426)) {
@@ -591,7 +567,6 @@ body.lock {
 	&__text {
 		width: 80%;
 		margin: 0 auto;
-		// margin-top: rem(90);
 
 		@media (min-width:1440px) {
 			width: 45%;
@@ -755,39 +730,6 @@ body.lock {
 	display: block;
 	color: antiquewhite;
 }
-
-// .inscrease.active {
-// 	animation: inscrease-active 3s;
-// 	opacity: 0;
-// }
-
-// @keyframes inscrease {
-// 	0% {
-// 		opacity: 0;
-// 	}
-
-// 	70% {
-// 		opacity: 1;
-// 	}
-
-// 	100% {
-// 		opacity: 1;
-// 	}
-// }
-
-// @keyframes inscrease-active {
-// 	0% {
-// 		opacity: 1;
-// 	}
-
-// 	70% {
-// 		opacity: 0;
-// 	}
-
-// 	100% {
-// 		opacity: 0;
-// 	}
-// }
 
 @keyframes clouds {
 	0% {
@@ -998,11 +940,6 @@ body.lock {
 	@include adaptive-value("font-size", 24, 18, 2);
 }
 
-// .clients.active {
-// 	animation: inscrease-active 3s;
-// 	opacity: 0;
-// }
-
 //-------------------plan----------------------------
 
 .plan {
@@ -1211,15 +1148,9 @@ body.lock {
 	}
 }
 
-// .plan.active {
-// 	animation: inscrease-active 3s;
-// 	opacity: 0;
-// }
-
 //-------------------read----------------------------
 
 .read {
-	// border: 1px solid #000;
 	width: 100%;
 	padding: rem(115) rem(0);
 	position: relative;
@@ -1552,11 +1483,6 @@ body.lock {
 	}
 }
 
-// .read.active {
-// 	animation: inscrease-active 3s;
-// 	opacity: 0;
-// }
-
 //-------------------Numbers----------------------------
 
 .numbers {
@@ -1677,7 +1603,6 @@ body.lock {
 	&__content {
 		width: 100%;
 		margin: 0 auto;
-		// display: flex;
 		flex-direction: column;
 		align-items: center;
 		min-width: 0;
@@ -1790,7 +1715,6 @@ body.lock {
 
 	&__item {
 		display: flex !important;
-		// display: flex;
 		padding: rem(40) rem(35);
 		background-color: #fff;
 		width: rem(960);
@@ -1810,7 +1734,6 @@ body.lock {
 	&__images {
 		display: flex;
 		flex: 1 1 auto;
-		// border: 1px solid #000;
 		gap: rem(12);
 
 		@media (max-width:769px) {
@@ -1978,78 +1901,32 @@ body.lock {
 	}
 }
 
-.button-right {}
-
-.button-left {}
-
-
 //-------------------SLIDER
 
-
-/* Слайдер */
-.slick-slider {}
-
-/* Слайдер запущен */
-.slick-slider.slick-initialized {}
-
-/* Слайдер с точками */
-.slick-slider.slick-dotted {}
-
-/* Ограничивающая оболочка */
+/* Обмежуюча оболонка */
 .slick-list {
 	overflow: hidden;
 }
 
-/* Лента слайдов */
+/* Лента слайдів */
 .slick-track {
 	display: flex;
 }
 
-/* Слайд */
-.slick-slide {}
-
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {}
-
-/* Слайд основной */
-.slick-slide.slick-current {}
-
-/* Слайд по центру */
-.slick-slide.slick-center {}
-
-/* Клонированный слайд */
-.slick-slide.slick-cloned {}
-
-/* Стрелка */
+/* Стрілки */
 .slick-arrow {
 	&:hover {
 		cursor: pointer;
 	}
 }
 
-/* Стрелка влево */
-.slick-arrow.slick-prev {}
 
-/* Стрелка вправо */
-.slick-arrow.slick-next {}
-
-/* Стрелка не активная */
-.slick-arrow.slick-disabled {}
-
-/* Точки (булиты) */
+/* Точки (буліти) */
 .slick-dots {
 	&:hover {
 		cursor: pointer;
 	}
 }
-
-.slick-dots li {}
-
-/* Активная точка */
-.slick-dots li.slick-active {}
-
-/* Элемент точки */
-.slick-dots li button {}
 
 //------------------------Customer-------------
 
@@ -2361,8 +2238,6 @@ body.lock {
 	}
 }
 
-.-container {}
-
 ._icon-arrow_up {
 	font-size: rem(30);
 	position: absolute;
@@ -2425,6 +2300,10 @@ body.lock {
 
 		@media (max-width:426px) {
 			padding: rem(50) rem(0);
+		}
+
+		@media (max-width:321px) {
+			width: 85%;
 		}
 	}
 
@@ -2497,6 +2376,10 @@ body.lock {
 				border: #C7D3FF 1px solid;
 				color: #C7D3FF;
 				background-color: #A0B4FF;
+			}
+
+			@media (max-width:321px) {
+				padding: rem(13) rem(12);
 			}
 		}
 	}
@@ -2626,6 +2509,10 @@ body.lock {
 		padding: rem(58) rem(36);
 	}
 
+	@media (max-width:376px) {
+		padding: rem(58) rem(36);
+	}
+
 	&__content {
 		width: 100%;
 		margin: 0 auto;
@@ -2708,6 +2595,10 @@ body.lock {
 				text-indent: 250px;
 				transition: text-indent 1s ease;
 			}
+
+			@media (max-width:376px) {
+				width: 100%;
+			}
 		}
 
 		& a {
@@ -2738,12 +2629,108 @@ body.lock {
 				background-color: #fff;
 				color: #4D6CE1;
 			}
+
+			@media (max-width:376px) {
+				text-align: center;
+			}
+		}
+
+		@media (max-width:376px) {
+			flex-direction: column;
+			align-items: stretch;
 		}
 	}
 }
 
 
 //-------------------Footer----------------------------
+
+.footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: rem(90) rem(100);
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	gap: rem(28);
+	animation: header-right 3s;
+
+	@media (max-width:em(1025)) {
+		padding: rem(50) rem(20);
+	}
+
+	@media (max-width:768px) {
+		gap: rem(18);
+	}
+
+	@media (max-width:em(426)) {
+		padding: rem(30) rem(0);
+	}
+
+	&__content {
+		display: flex;
+		width: 100%;
+	}
+
+	&__copy {
+		display: flex;
+		width: 100%;
+		font-family: 'Quicksand';
+		font-style: normal;
+		font-weight: $font-weight;
+		font-size: rem(12);
+		line-height: rem(15);
+		letter-spacing: 0.05em;
+		text-transform: capitalize;
+		color: #AEB8D0;
+		align-items: center;
+		padding-left: rem(135);
+		justify-content: space-between;
+
+		@include adaptive-value("font-size", 12, 4, 2);
+
+		@media (min-width:2560px) {
+			padding-left: rem(425);
+		}
+
+		@media (max-width:1024px) {
+			padding-left: rem(95);
+		}
+
+		@media (max-width:768px) {
+			padding-left: rem(75);
+		}
+
+		@media (max-width:426px) {
+			justify-content: center;
+			padding: 0;
+		}
+	}
+}
+
+@media (max-width:426px) {
+	.footer-logo {
+		flex: 0 0 rem(26);
+		width: rem(26);
+		height: rem(26);
+		border-radius: 50%;
+		background: #5E81FE;
+		margin: 0px rem(5);
+	}
+}
+
+@media (max-width:321px) {
+	.footer-left {
+		align-items: start;
+		padding-top: rem(8);
+	}
+}
+
+.footer.active {
+	animation: page-active 3s;
+	opacity: 0;
+}
 
 
 //---------------------Up Button---------------------
@@ -2752,8 +2739,9 @@ body.lock {
 	position: fixed;
 	bottom: 20px;
 	right: 40px;
-	color: #0D5C63;
-	font-size: 48px;
+	border-radius: 50%;
+	color: #5E81FE;
+	font-size: 36px;
 	display: none;
 
 	&:hover {

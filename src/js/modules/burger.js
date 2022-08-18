@@ -12,6 +12,7 @@ let spanAnimate = headerColum.querySelectorAll('*');
 let lock = document.querySelector('body');
 
 let page = document.querySelector('.page');
+let footer = document.querySelector('.footer');
 
 let nav = document.querySelector('#nav');
 
@@ -32,6 +33,7 @@ logoClick.addEventListener('click', function () {
 	lock.classList.toggle('lock');
 
 	page.classList.toggle('active');
+	footer.classList.toggle('active');
 })
 
 headerColum.addEventListener('click', function () {
@@ -51,6 +53,7 @@ headerColum.addEventListener('click', function () {
 	lock.classList.remove('lock');
 
 	page.classList.remove('active');
+	footer.classList.remove('active');
 })
 
 

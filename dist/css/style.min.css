@@ -241,6 +241,7 @@ body.lock {
   flex: 1 1 auto;
   margin: 0 auto;
   overflow: hidden;
+  animation: header-right 3s;
 }
 
 .page.active {
@@ -2118,39 +2119,26 @@ body.lock {
   cursor: pointer;
 }
 
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
+/* Обмежуюча оболонка */
 .slick-list {
   overflow: hidden;
 }
 
-/* Лента слайдов */
+/* Лента слайдів */
 .slick-track {
   display: flex;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
+/* Стрілки */
 .slick-arrow:hover {
   cursor: pointer;
 }
 
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
+/* Точки (буліти) */
 .slick-dots:hover {
   cursor: pointer;
 }
 
-/* Активная точка */
-/* Элемент точки */
 .customer {
   padding: 7.7857142857rem 0rem 7.7857142857rem 19.6428571429rem;
   background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
@@ -2541,6 +2529,11 @@ body.lock {
     padding: 3.5714285714rem 0rem;
   }
 }
+@media (max-width: 321px) {
+  .get__content {
+    width: 85%;
+  }
+}
 .get__subtitle {
   font-family: "Roboto";
   font-style: normal;
@@ -2618,6 +2611,11 @@ body.lock {
   border: #C7D3FF 1px solid;
   color: #C7D3FF;
   background-color: #A0B4FF;
+}
+@media (max-width: 321px) {
+  .get__button a {
+    padding: 0.9285714286rem 0.8571428571rem;
+  }
 }
 
 .get__cloud {
@@ -2749,6 +2747,11 @@ body.lock {
     padding: 4.1428571429rem 2.5714285714rem;
   }
 }
+@media (max-width: 376px) {
+  .form {
+    padding: 4.1428571429rem 2.5714285714rem;
+  }
+}
 .form__content {
   width: 100%;
   margin: 0 auto;
@@ -2858,6 +2861,11 @@ body.lock {
   text-indent: 250px;
   transition: text-indent 1s ease;
 }
+@media (max-width: 376px) {
+  .form__right input {
+    width: 100%;
+  }
+}
 .form__right a {
   background-color: #4D6CE1;
   box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
@@ -2909,13 +2917,119 @@ body.lock {
   background-color: #fff;
   color: #4D6CE1;
 }
+@media (max-width: 376px) {
+  .form__right a {
+    text-align: center;
+  }
+}
+@media (max-width: 376px) {
+  .form__right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 6.4285714286rem 7.1428571429rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  gap: 2rem;
+  animation: header-right 3s;
+}
+@media (max-width: 73.2142857143em) {
+  .footer {
+    padding: 3.5714285714rem 1.4285714286rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    gap: 1.2857142857rem;
+  }
+}
+@media (max-width: 30.4285714286em) {
+  .footer {
+    padding: 2.1428571429rem 0rem;
+  }
+}
+.footer__content {
+  display: flex;
+  width: 100%;
+}
+.footer__copy {
+  display: flex;
+  width: 100%;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8571428571rem;
+  line-height: 1.0714285714rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #AEB8D0;
+  align-items: center;
+  padding-left: 9.6428571429rem;
+  justify-content: space-between;
+  font-size: 0.8571428571em;
+}
+@media (min-width: 102.8571428571em) {
+  .footer__copy {
+    font-size: calc(0.2857142857em + 0.5714285714 * ((100vw - 22.8571429em) / 80));
+  }
+}
+@media (min-width: 2560px) {
+  .footer__copy {
+    padding-left: 30.3571428571rem;
+  }
+}
+@media (max-width: 1024px) {
+  .footer__copy {
+    padding-left: 6.7857142857rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer__copy {
+    padding-left: 5.3571428571rem;
+  }
+}
+@media (max-width: 426px) {
+  .footer__copy {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 426px) {
+  .footer-logo {
+    flex: 0 0 1.8571428571rem;
+    width: 1.8571428571rem;
+    height: 1.8571428571rem;
+    border-radius: 50%;
+    background: #5E81FE;
+    margin: 0px 0.3571428571rem;
+  }
+}
+@media (max-width: 321px) {
+  .footer-left {
+    align-items: start;
+    padding-top: 0.5714285714rem;
+  }
+}
+.footer.active {
+  animation: page-active 3s;
+  opacity: 0;
+}
 
 ._icon-up {
   position: fixed;
   bottom: 20px;
   right: 40px;
-  color: #0D5C63;
-  font-size: 48px;
+  border-radius: 50%;
+  color: #5E81FE;
+  font-size: 36px;
   display: none;
 }
 ._icon-up:hover {
