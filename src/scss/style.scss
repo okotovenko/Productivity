@@ -2630,6 +2630,10 @@ body.lock {
 				color: #4D6CE1;
 			}
 
+			@media (max-width:426px) {
+				padding: rem(20) rem(40);
+			}
+
 			@media (max-width:376px) {
 				text-align: center;
 			}

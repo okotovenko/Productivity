@@ -2917,6 +2917,11 @@ body.lock {
   background-color: #fff;
   color: #4D6CE1;
 }
+@media (max-width: 426px) {
+  .form__right a {
+    padding: 1.4285714286rem 2.8571428571rem;
+  }
+}
 @media (max-width: 376px) {
   .form__right a {
     text-align: center;
